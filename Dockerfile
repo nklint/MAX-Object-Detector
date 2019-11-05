@@ -37,8 +37,8 @@ RUN wget -nv --show-progress --progress=bar:force:noscroll https://github.com/IB
 RUN mv ./MAX-Object-Detector-Web-App-1.2/static static
 
 COPY requirements.txt /workspace
-COPY tf /workspace
-RUN pip install tf/tensorflow-1.12.0-cp27-cp27mu-linux_x86_64.whl
+COPY tf/tensorflow-1.12.2-cp36-cp36m-linux_x86_64.whl /workspace
+RUN pip install tensorflow-1.12.2-cp36-cp36m-linux_x86_64.whl
 RUN pip install -r requirements.txt
 
 COPY . /workspace
